@@ -2,7 +2,7 @@ public class Finder {
 
     public Integer findMax(int[] intArray)
     {
-        if (intArray == null || intArray.length < 1)
+        if (intArray == null || intArray.length == 0)
         {
             return null;
         }
@@ -19,7 +19,7 @@ public class Finder {
 
     public Integer findMin(int[] intArray)
     {
-        if (intArray == null || intArray.length < 1)
+        if (intArray == null || intArray.length == 0)
         {
             return null;
         }
