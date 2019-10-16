@@ -82,6 +82,13 @@ public class AddPurchaseUI {
         txtQuantity.getDocument().addDocumentListener(new QuantityChangeListener());
 
         btnAdd.addActionListener(new AddButtonListerner());
+
+        btnCancel.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent actionEvent) {
+                view.dispose();
+            }
+        });
     }
 
     public void run() {
