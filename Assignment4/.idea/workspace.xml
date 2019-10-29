@@ -1,7 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="0be58a7b-65e2-4a5d-894a-f7db7ecbf6ba" name="Default Changelist" comment="" />
+    <list default="true" id="0be58a7b-65e2-4a5d-894a-f7db7ecbf6ba" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ProductServer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ProductServer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/StoreManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/StoreManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/UpdatePurchaseUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/UpdatePurchaseUI.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/AddPurchaseUI$CustomerIDFocusListener.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/AddPurchaseUI$CustomerIDFocusListener.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/AddPurchaseUI$ProductIDFocusListener.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/AddPurchaseUI$ProductIDFocusListener.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/AddPurchaseUI.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/AddPurchaseUI.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/META-INF/Assignment4.kotlin_module" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/MainUI$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/MainUI$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/MainUI$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/MainUI$2.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/MainUI$3.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/MainUI$3.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/MainUI$4.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/MainUI$4.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/MainUI.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/MainUI.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ProductServer.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ProductServer.class" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -15,6 +32,9 @@
       </list>
     </option>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
   <component name="MavenImportPreferences">
     <option name="importingSettings">
       <MavenImportingSettings>
@@ -23,6 +43,11 @@
     </option>
   </component>
   <component name="ProjectId" id="1SkJiwGIDThHy28eImB3WiJ0aAj" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="PropertiesComponent">
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+  </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\austi\OneDrive\Desktop\COMP3700 Software Modeling\Activities\Assignment4\src\main\java" />
@@ -40,24 +65,24 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.Client">
-    <configuration name="Client" type="Application" factoryName="Application">
+  <component name="RunManager" selected="Application.client">
+    <configuration name="client" type="Application" factoryName="Application">
       <option name="MAIN_CLASS_NAME" value="StoreManager" />
-      <module name="Assignment4" />
+      <module name="Assignment-4" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Server" type="Application" factoryName="Application">
+    <configuration name="server" type="Application" factoryName="Application">
       <option name="MAIN_CLASS_NAME" value="ProductServer" />
-      <module name="Assignment4" />
+      <module name="Assignment-4" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <list>
-      <item itemvalue="Application.Server" />
-      <item itemvalue="Application.Client" />
+      <item itemvalue="Application.server" />
+      <item itemvalue="Application.client" />
     </list>
   </component>
   <component name="SvnConfiguration">
@@ -72,5 +97,16 @@
       <updated>1572101790938</updated>
     </task>
     <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
 </project>

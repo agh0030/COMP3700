@@ -8,7 +8,7 @@ import java.util.HashMap;
 import java.util.Scanner;
 
 public class ProductServer {
-    static String dbfile = "/Users/austin/Desktop/SQLite/store2.db";
+    static String dbfile = "C:\\Users\\austi\\OneDrive\\Desktop\\SQL Databases\\store2.db";
 
     public static void main(String[] args) {
 

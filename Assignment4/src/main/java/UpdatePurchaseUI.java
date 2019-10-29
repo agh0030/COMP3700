@@ -46,19 +46,19 @@ public class UpdatePurchaseUI {
         JPanel line1 = new JPanel(new FlowLayout());
         line1.add(new JLabel("PurchaseID "));
         line1.add(txtPurchaseID);
-        line1.add(labDate);
+        //line1.add(labDate);
         view.getContentPane().add(line1);
 
         JPanel line2 = new JPanel(new FlowLayout());
         line2.add(new JLabel("CustomerID "));
         line2.add(txtCustomerID);
-        line2.add(labCustomerName);
+        //line2.add(labCustomerName);
         view.getContentPane().add(line2);
 
         JPanel line3 = new JPanel(new FlowLayout());
         line3.add(new JLabel("ProductID "));
         line3.add(txtProductID);
-        line3.add(labProductName);
+        //line3.add(labProductName);
         view.getContentPane().add(line3);
 
         JPanel line4 = new JPanel(new FlowLayout());
@@ -73,6 +73,9 @@ public class UpdatePurchaseUI {
         line5.add(labTotalCost);
         view.getContentPane().add(line5);
 
+        btnLoad.addActionListener(new LoadButtonListerner());
+        btnSave.addActionListener(new SaveButtonListener());
+
     }
 
     public void run() {
@@ -84,7 +87,6 @@ public class UpdatePurchaseUI {
         @Override
         public void actionPerformed(ActionEvent actionEvent) {
             PurchaseModel purchase = new PurchaseModel();
-
             String id = txtPurchaseID.getText();
 
             if (id.length() == 0) {
@@ -107,9 +109,11 @@ public class UpdatePurchaseUI {
                 PrintWriter output = new PrintWriter(link.getOutputStream(), true);
 
                 output.println("GET PURCHASE");
-                output.println(purchase.mProductID);
+                output.println(purchase.mPurchaseID);
+                if (input.hasNextInt()) {
+                    purchase.mCustomerID = input.nextInt();
+                }
 
-                purchase.mCustomerID = input.nextInt();
                 txtCustomerID.setText(Integer.toString(purchase.mCustomerID));
 
                 purchase.mProductID = input.nextInt();
