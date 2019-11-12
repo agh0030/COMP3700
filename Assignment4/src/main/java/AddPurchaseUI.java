@@ -91,7 +91,7 @@ public class AddPurchaseUI {
         view.setVisible(true);
     }
 
-    class ProductIDFocusListener implements FocusListener {
+    private class ProductIDFocusListener implements FocusListener {
         @Override
         public void focusGained(FocusEvent focusEvent) {
 
@@ -128,7 +128,7 @@ public class AddPurchaseUI {
                 JOptionPane.showMessageDialog(null,
                         "Error: No product with id = " + purchase.mProductID + " in store!", "Error Message",
                         JOptionPane.ERROR_MESSAGE);
-                        labProductName.setText("Product Name: ");
+                labProductName.setText("Product Name: ");
 
                 return;
             }
@@ -141,7 +141,7 @@ public class AddPurchaseUI {
 
     }
 
-    class CustomerIDFocusListener implements FocusListener {
+    private class CustomerIDFocusListener implements FocusListener {
         @Override
         public void focusGained(FocusEvent focusEvent) {
 
@@ -265,13 +265,11 @@ public class AddPurchaseUI {
                 return;
             }
 
-
-            switch (StoreManager.getInstance().getDataAdapter().savePurchase(purchase)) {
-                case SQLiteDataAdapter.PURCHASE_DUPLICATE_ERROR:
-                    JOptionPane.showMessageDialog(null, "Purchase NOT added successfully! Duplicate product ID!");
-                default:
-                    JOptionPane.showMessageDialog(null, "Purchase added successfully!" + purchase);
-            }
+            int res = StoreManager.getInstance().getDataAdapter().savePurchase(purchase);
+            if (res == SQLiteDataAdapter.PURCHASE_SAVE_FAILED)
+                JOptionPane.showMessageDialog(null, "Purchase NOT added successfully! Duplicate product ID!");
+            else
+                JOptionPane.showMessageDialog(null, "Purchase added successfully!" + purchase);
         }
     }
 

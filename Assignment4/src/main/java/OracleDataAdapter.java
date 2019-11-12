@@ -18,12 +18,17 @@ public class OracleDataAdapter implements IDataAdapter {
         return null;
     }
     public int saveProduct(ProductModel model) {
-        return PRODUCT_SAVED_OK;
+        return PRODUCT_SAVE_OK;
     }
 
     @Override
     public int savePurchase(PurchaseModel model) {
         return 0;
+    }
+
+    @Override
+    public UserModel loadUser(String username) {
+        return null;
     }
 
 }

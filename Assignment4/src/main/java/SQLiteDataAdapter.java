@@ -59,19 +59,25 @@ public class SQLiteDataAdapter implements IDataAdapter {
     }
     public int saveProduct(ProductModel product) {
         try {
+            Statement stmt = conn.createStatement();
+            ProductModel p = loadProduct(product.mProductID); // check if this product exists
+            if (p != null) {
+                stmt.executeUpdate("DELETE FROM Products WHERE ProductID = " + product.mProductID);
+            }
+
             String sql = "INSERT INTO Products(ProductId, Name, Price, Quantity) VALUES " + product;
             System.out.println(sql);
-            Statement stmt = conn.createStatement();
+
             stmt.executeUpdate(sql);
 
         } catch (Exception e) {
             String msg = e.getMessage();
             System.out.println(msg);
             if (msg.contains("UNIQUE constraint failed"))
-                return PRODUCT_DUPLICATE_ERROR;
+                return PRODUCT_SAVE_FAILED;
         }
 
-        return PRODUCT_SAVED_OK;
+        return PRODUCT_SAVE_OK;
     }
 
     @Override
@@ -86,10 +92,10 @@ public class SQLiteDataAdapter implements IDataAdapter {
             String msg = e.getMessage();
             System.out.println(msg);
             if (msg.contains("UNIQUE constraint failed"))
-                return PURCHASE_DUPLICATE_ERROR;
+                return PURCHASE_SAVE_FAILED;
         }
 
-        return PURCHASE_SAVED_OK;
+        return PURCHASE_SAVE_OK;
 
     }
 
@@ -108,9 +114,31 @@ public class SQLiteDataAdapter implements IDataAdapter {
                 customer.mAddress = rs.getString("Address");
             }
 
-        } catch (SQLException e) {
+        } catch (Exception e) {
             System.out.println(e.getMessage());
         }
         return customer;
     }
+
+    public UserModel loadUser(String username) {
+        UserModel user = null;
+
+        try {
+            String sql = "SELECT * FROM Users WHERE Username = \"" + username + "\"";
+            Statement stmt = conn.createStatement();
+            ResultSet rs = stmt.executeQuery(sql);
+            if (rs.next()) {
+                user = new UserModel();
+                user.mUsername = username;
+                user.mPassword = rs.getString("Password");
+                user.mFullname = rs.getString("Fullname");
+                user.mUserType = rs.getInt("Usertype");
+            }
+
+        } catch (Exception e) {
+            System.out.println(e.getMessage());
+        }
+        return user;
+    }
+
 }
